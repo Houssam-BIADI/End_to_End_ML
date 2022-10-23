@@ -21,5 +21,16 @@ def predict_api():
     return jsonify(output)
 
 
+@app.route("/predict", methods=["POST"])
+def predict():
+    data = [float(x) for x in request.form.values()]
+    array_data = np.array(data).reshape(1, -1)
+    output = round(model.predict_proba(array_data)[0][1], 3)
+    return render_template(
+        "home.html",
+        prediction_text=f"your probabilty of having a heart desease is {output}",
+    )
+
+
 if __name__ == "__main__":
     app.run(debug=True)

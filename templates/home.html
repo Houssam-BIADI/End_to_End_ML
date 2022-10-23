@@ -1,3 +1,56 @@
-<h1>
-    Hello this is a simple ML app made by Houssam BIADI
-</h1>
+<!DOCTYPE html>
+<html >
+
+<head>
+  <meta charset="UTF-8">
+  <title>ML API</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Heart Desease Prediction</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+      <input type="text" name="Bmi" placeholder="Bmi" required="required" /><br>
+    	<input type="text" name="Smoking" placeholder="Smoking" required="required" /><br>
+        <input type="text" name="AlcoholDrinking" placeholder="AlcoholDrinking" required="required" /><br>
+        <input type="text" name="Stroke" placeholder="Stroke" required="required" /><br>
+        <input type="text" name="PhysicalHealth" placeholder="PhysicalHealth" required="required" /><br>
+        <input type="text" name="MentalHealth" placeholder="MentalHealth" required="required" /><br>
+        <input type="text" name="DiffWalking" placeholder="DiffWalking" required="required" /><br>
+        <input type="text" name="Sex" placeholder="Sex" required="required" /><br>
+        <input type="text" name="AgeCategory" placeholder="AgeCategory" required="required" /><br>
+        <input type="text" name="PhysicalActivity" placeholder="PhysicalActivity" required="required" /><br>
+        <input type="text" name="GenHealth" placeholder="GenHealth" required="required" /><br>
+        <input type="text" name="SleepTime" placeholder="SleepTime" required="required" /><br>
+        <input type="text" name="Asthma" placeholder="Asthma" required="required" /><br>
+        <input type="text" name="KidneyDisease" placeholder="KidneyDisease" required="required" /><br>
+        <input type="text" name="SkinCancer" placeholder="SkinCancer" required="required" /><br>
+        <input type="text" name="Race_Asian" placeholder="Race_Asian" required="required" /><br>
+        <input type="text" name="Race_Black" placeholder="Race_Black" required="required" /><br>
+        <input type="text" name="Race_Hispanic" placeholder="Race_Hispanic" required="required" /><br>
+        <input type="text" name="Race_Other" placeholder="Race_Other" required="required" /><br>
+        <input type="text" name="Race_White" placeholder="Race_White" required="required" /><br>
+        <input type="text" name="Diabetic_No, borderline diabetes" placeholder="Diabetic_No, borderline diabetes" required="required" /><br>
+        <input type="text" name="Diabetic_Yes" placeholder="Diabetic_Yes" required="required" /><br>
+        <input type="text" name="Diabetic_Yes (during pregnancy)" placeholder="Diabetic_Yes (during pregnancy)" required="required" /><br>
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+  
+   
+ </div>
+ {{prediction_text}}
+
+</body>
+</html>
