@@ -6,5 +6,3 @@
 3. **Docker** : to containerize the flask app.
 4. **Heroku** : as a cloud provider.
 5. **Flask**  : to create the app.
-
-You can access the app from this [link](https://end-to-end-hbi.herokuapp.com/)
