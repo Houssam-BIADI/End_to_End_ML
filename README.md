@@ -6,3 +6,4 @@
 3. **Docker** : to containerize the flask app.
 4. **Heroku** : as a cloud provider.
 5. **Flask**  : to create the app.
+The purpose of this repo is to deploy a machine learning model in the cloud using MLops techniques and CI/CD principles. 
